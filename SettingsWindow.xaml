@@ -1,0 +1,41 @@
+﻿<Controls:MetroWindow
+	x:Class="ADAM.SettingsWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	Title="ADAM Settings" 
+	Height="300" 
+	Width="800"
+	GlowBrush="{DynamicResource AccentColorBrush}"
+    WindowStartupLocation="CenterScreen">
+
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+				<!-- Accent and AppTheme setting -->
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+
+	<Grid Background="#FF2B2B2B">
+		<Grid.Resources>
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+		</Grid.Resources>
+		<TabControl>
+			<TabItem Header="Keys">
+				<Grid HorizontalAlignment="Left" Height="218" VerticalAlignment="Top" Width="760" Margin="15,0,0,0">
+					<Label Name="CoreAuthKeyLabel" Content="Core Auth Key:" HorizontalAlignment="Left" VerticalAlignment="Top" />
+					<TextBox Name="CoreAuthKeyInput" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Margin="93,1,0,0" />
+					<Button Name="CoreAuthKeyTestButton" Content="Save &amp; Test Key" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="492,1,0,0" BorderThickness="1" Height="26" />
+					<TextBlock Name="CoreAuthKeyTestResult" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="597,5,0,0" Width="150" />
+				</Grid>
+			</TabItem>
+		</TabControl>
+	</Grid>
+</Controls:MetroWindow>
